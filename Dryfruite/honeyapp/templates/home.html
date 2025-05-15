@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+{% endblock style %}
+{% block content %}
+
+
+   
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>WELL COME TO BALGHARI ORGANIC!</h1>
+            <h1>Choose the best healthier way of life.</h1>
+            <p>Leading Brand for Organic Food</p>
+            <!-- <a href="#" class="btn">Shop Now <span>&rarr;</span></a> -->
+        </div>
+        <div class="hero-image">
+            <img class="img-fluid " src="{% static 'images/landingjpg.jpg' %}" alt="Organic Food" id="landingimage">
+        </div>
+    </div>
+
+    <!-- about page  -->
+     
+{% include "abt.html" %}
+
+  
+    <!-- about page  -->
+   
+<!-- Product Card Carousel -->
+
+<div class="slider-container">
+    <h2 class="text-center fw-bold text-italic text-white pt-4">PRODUCTS</h2>
+    <div class="slider-wrapper">
+        <!-- Repeat product cards dynamically -->
+        {% for prod in product %}
+        <div class="product-card">
+            <a href="{% url 'detail' prod.id %}" style="text-decoration: none;">
+                {% if prod.image %}
+                <img src="{{ prod.image.url }}" alt="{{ prod.name }}">
+                {% else %}
+                <img src="{% static 'images/default-product.png' %}" alt="Default Image">
+                {% endif %}
+                <h5>{{ prod.name }}</h5>
+                <p class="price">₹{{ prod.price }}</p>
+                <p class="quantity">{{ prod.quantity }}</p>
+            </a>
+            <div class="product-buttons">
+                <form action="{% url 'add_to_cart' prod.id %}" method="post">
+                    {% csrf_token %}
+                    <button class="btn">
+                        <i class="bi bi-cart"></i> Add to Cart
+                    </button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Slider Controls -->
+    <div class="slider-controls">
+        <button class="btn prev-btn">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="btn next-btn">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+    </div>
+</div>
+<!-- Product Card Carousel -->
+<script>
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const slides = document.querySelectorAll('.product-card');
+
+    let scrollAmount = 0;
+    let slideWidth = slides[0].clientWidth;
+
+    // Handle Next Button
+    nextBtn.addEventListener('click', () => {
+        scrollAmount += slideWidth;
+        if (scrollAmount >= sliderWrapper.scrollWidth) {
+            scrollAmount = 0;
+        }
+        sliderWrapper.style.transform = `translateX(-${scrollAmount}px)`;
+    });
+
+    // Handle Previous Button
+    prevBtn.addEventListener('click', () => {
+        scrollAmount -= slideWidth;
+        if (scrollAmount < 0) {
+            scrollAmount = sliderWrapper.scrollWidth - slideWidth;
+        }
+        sliderWrapper.style.transform = `translateX(-${scrollAmount}px)`;
+    });
+</script>
+ 
+
+
+<!-- conatct page  -->
+
+{% include "cntct.html" %}
+<!-- conatct page  -->
+    
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

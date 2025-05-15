@@ -1,0 +1,138 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<div class="container-fluid">
+
+    <div class="about-section">
+        <div class="about-text">
+            <h1 class="text-center">About Us</h1>
+            <p>Welcome to [Your Business Name]!</p>
+            <p>With over a decade of experience, we take pride in bringing you the finest Silajeet, Honey, and Dry Fruits. Since our humble beginnings 10 years ago, our mission has been simple: to provide high-quality, natural, and authentic products that promote health and wellness.</p>
+            
+          
+    
+            <h3>Our Vision</h3>
+            <p>We aim to continue our legacy of trust and quality by expanding our offerings while staying committed to sustainability and customer satisfaction.</p>
+    
+            <p>Thank you for choosing us as your partner in health and wellness. Together, let’s make every day healthier and happier!</p>
+        </div>
+    
+        <div class="about-image" >
+            <img src="{% static 'images/landingjpg.jpg' %}" alt="About Us Image" id="abtimg" />
+        </div>
+    </div>
+    
+    <!-- Counter Section below About Us -->
+    
+    
+    
+    
+    <!-- Counter Section -->
+    <div class="counter-section text-center ">  
+        <div class="container-fluid" id="counter">  
+            <div class="row">  
+                <div class="col-md-4 col-sm-6">  
+                    <h3 class="counter" data-target="5000">0</h3>  
+                    <p>Happy Customers</p>  
+                </div>  
+                <div class="col-md-4 col-sm-6">  
+                    <h3 class="counter" data-target="24">0</h3>  
+                    <p>Open Hours</p>  
+                </div>  
+                <div class="col-md-4 col-sm-6">  
+                    <h3 class="counter" data-target="50">0</h3>  
+                    <p>Products Sold</p>  
+                </div>  
+            </div>  
+        </div>  
+    </div>
+    
+
+<div class="team-section mt-3">
+    <h2 class="team-heading text-center mb-3">Meet Our Team</h2>
+    <div class="container unique-team-container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'images/contact img.jpg' %}"  alt="Mary Brown">
+                    </div>
+                    <h4 class="team-name">Mary Brown</h4>
+                    <p class="team-role">creative leader</p>
+                    <p class="team-description">
+                        Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis quis
+                        glavi from dolor amet ligula lorem bibendum.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'images/contact img.jpg' %}"  alt="Bob Greenfield">
+                    </div>
+                    <h4 class="team-name">Bob Greenfield</h4>
+                    <p class="team-role">programming guru</p>
+                    <p class="team-description">
+                        Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis quis
+                        glavi from dolor amet ligula lorem bibendum.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'images/contact img.jpg' %}"  alt="Ann Richmond">
+                    </div>
+                    <h4 class="team-name">Ann Richmond</h4>
+                    <p class="team-role">sales manager</p>
+                    <p class="team-description">
+                        Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis quis
+                        glavi from dolor amet ligula lorem bibendum.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+<script>
+    // Counter animation script
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            const current = +counter.innerText;
+            const increment = target / 200;
+
+            if (current < target) {
+                counter.innerText = `${Math.ceil(current + increment)}`;
+                setTimeout(updateCounter, 15);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCounter();
+    });
+</script>
+</div>

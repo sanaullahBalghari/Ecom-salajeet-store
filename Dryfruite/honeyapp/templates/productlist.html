@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'css/productlist.css' %}">
+
+{% endblock style %}
+
+{% block content %}
+<div class="product-container container-fluid">
+  <h2 class="text-center fw-bold text-italic text-white">PRODUCTS</h2>
+
+  <!-- Filter Buttons -->
+  <div class="category-buttons">
+    <form action="" method="post">{% csrf_token %}
+      <input type="hidden" name="prod" value="all">
+      <button type="submit">All</button>
+    </form>
+    {% for prod in categories %}
+    <form action="" method="post">{% csrf_token %}
+      <input type="hidden" name="prod" value="{{ prod.name }}">
+      <button type="submit">{{ prod.name }}</button>
+    </form>
+    {% endfor %}
+  </div>
+
+  <!-- Product Cards -->
+  <div class="row">
+    {% for prod in products %}
+    <div class="col-md-3 col-6">
+      <div class="product-card">
+        <a href="{% url 'detail' prod.id %}" style="text-decoration: none;" title="Detail page">
+          {% if prod.image %}
+            <img src="{{ prod.image.url }}" alt="{{ prod.name }}">
+          {% else %}
+            <img src="{% static 'images/default-product.png' %}" alt="Default Image">
+          {% endif %}
+          <h5>{{ prod.name }}</h5>
+          <p class="price">₹{{ prod.price }}</p>
+          <p class="quantity"> {{ prod.quantity }}</p>
+        </a>
+        
+        <div class="product-buttons">
+          <form action="{% url 'add_to_cart' prod.id %}" method="post">
+            {% csrf_token %}
+            <button class="btn">
+              <i class="bi bi-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

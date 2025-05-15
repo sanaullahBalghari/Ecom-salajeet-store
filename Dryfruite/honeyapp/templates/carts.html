@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+
+{% endblock style %}
+{% block content %}
+
+ <link rel="stylesheet" href="{% static 'css/cartpage.css' %}"> 
+
+<div class="pt-5 checkoutsec m-3">
+    <h1 class="">Checkout</h1>
+    <div class="row">
+        <!-- Left Column: Shipping Information -->
+        <div class="col-md-6">
+            <h4>Shipping Information</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <select id="country" class="form-select">
+                        <option selected>Select your country</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>United Kingdom</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Column: Cart Summary -->
+        <div class="col-md-6">
+            <h4>Review Your Cart</h4>
+            <ul class="list-group mb-3">
+                {% for item in cart_items %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="my-0">{{ item.product }}</h6>
+                        <small class="text-muted">Quantity: {{ item.quantity }}</small>
+                    </div>
+                    <span class="text-muted">${{ item.total_price }}</span>
+                    <a href="{% url 'delete_cart_item' item.id %}" class="btn btn-lg  ms-2">
+                        <i class="bi bi-trash"></i>
+                      </a>
+                      
+                      
+                </li>
+                {% endfor %}
+            </ul>
+
+            <div class="d-flex justify-content-between fw-bold">
+                <p>Total</p>
+                <p>${{ total_price }}</p>
+            </div>
+            <button class="btn btn-primary w-100">Pay Now</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

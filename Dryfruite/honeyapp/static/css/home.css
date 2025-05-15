@@ -1,0 +1,215 @@
+    body {
+        background-color: #4A7324;
+      
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Hero Section Styles */
+    .hero-section {
+        background-color: #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 50px;
+        border-radius: 15px;
+        margin: 20px auto;
+        max-width: 1200px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hero-text {
+        flex: 1;
+    }
+    
+    .hero-text h1 {
+        color: #4A7324;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    
+    .hero-text p {
+        font-size: 1.2rem;
+        color: #666;
+    }
+    
+    .hero-text .btn {
+        background-color: #E10098;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 30px;
+        padding: 10px 20px;
+    }
+    
+    /* #landingimage {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+     */
+    #landingimage {
+        width: 100%;
+        /* max-width: 1000px;   */
+        max-width: 1000px;  
+        height: auto;
+        max-height: 500px;  
+        object-fit: cover;   
+        border-radius: 10px;
+        
+    }
+    
+    .about-section {
+        background-color: #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 50px;
+        border-radius: 15px;
+        margin: 20px auto;
+        max-width: 1200px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about-text {
+        flex: 1;
+    }
+    
+    .about-text h1 {
+        color: #4A7324;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    
+    .about-text p {
+        font-size: 1.2rem;
+        color: #666;
+    }
+    
+  
+    /* Product Card Styling */
+    .product-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+        padding: 15px;
+        background: #fff;
+        margin: 10px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+        max-width: 100%;
+        height: 200px; /* Adjust for larger images */
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .product-card h5 {
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .product-card .price {
+        color: #555;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .product-card .quantity {
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .product-card .product-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-card .btn {
+        background-color: #f8f9fa;
+        color: black;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        transition: background-color 0.3s;
+    }
+
+    .product-card .btn:hover {
+        background-color: #e0a800;
+        color: black;
+        border-color: #ddd;
+    }
+
+    /* Slider Styling */
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slider-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .slider-controls .btn {
+        background-color: #4A7324;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .slider-controls .btn:hover {
+        background-color: #e0a800;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .product-card img {
+            height: 150px;
+        }
+
+        .slider-wrapper {
+            flex-wrap: nowrap;
+        }
+
+        .product-card {
+            flex: 0 0 calc(50% - 20px);
+        }
+    }
+
+    @media (min-width: 769px) {
+        .product-card {
+            flex: 0 0 calc(25% - 20px);
+        }
+    }
+     
+     

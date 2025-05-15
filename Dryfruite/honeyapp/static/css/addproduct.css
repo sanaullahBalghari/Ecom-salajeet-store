@@ -1,0 +1,41 @@
+/* General Styles */
+body {
+    background-color: #4A7324;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.form-container {
+    width: 100%; 
+    margin: 20px auto;
+    background: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #555;
+}
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+.btn-custom {
+    background-color:#e0a800; 
+    border: none;
+    color: #fff;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background-color: #c8a106; /* Slightly darker yellow for hover */
+}
+input, textarea, select {
+    border-radius: 6px;
+}
+@media (max-width: 576px) {
+    .form-container {
+        padding: 15px;
+    }
+}

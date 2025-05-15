@@ -1,0 +1,80 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4A7324; 
+    margin: 0;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background-color: #fff;
+    margin: 10px 10px 10px ;
+    border-radius: 10px;
+    /* padding: 60px 0; */
+}
+
+.contact-section h2 {
+    color: #4A7324;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.contact-form {
+    font-size: 1rem;
+}
+
+form .form-label {
+    font-weight: bold;
+    color: #4A7324;
+}
+
+form .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+form .form-control:focus {
+    border-color: #4A7324;
+    box-shadow: 0 0 5px rgba(74, 115, 36, 0.5);
+}
+
+form button {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    background-color: #4A7324;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #3a5d1a;
+}
+
+/* Contact Image */
+.contact-image img {
+    max-height: 400px;
+    object-fit: cover;  /* Makes the image cover the div while maintaining aspect ratio */
+}
+
+/* Map Section Styling */
+.map-section {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+.map-section iframe {
+    border-radius: 8px;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+    
+    form button {
+        font-size: 1rem;
+    }
+}

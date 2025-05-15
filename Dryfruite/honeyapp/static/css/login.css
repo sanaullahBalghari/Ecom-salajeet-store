@@ -1,0 +1,55 @@
+body {
+    background: url('../images/register1-bg-pic.webp') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjust for smaller screens */
+        background-position: top center; /* Optional: Align image to the top for better visibility */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: 100%; /* Ensure full-width for very small screens */
+        background-position: top center; /* Optional: Keep the image aligned for visibility */
+    }
+}
+
+
+.card {
+    background: rgba(245, 245, 245, 0.9);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.2, 0.2);
+    border-radius: 20px;
+}
+
+.card h2 {
+    color: #2c3e50;
+}
+
+.form-control {
+    border: 1px solid #bdc3c7;
+}
+
+.btn-primary {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.btn-primary:hover {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.alert {
+    margin-top: 10px;
+}

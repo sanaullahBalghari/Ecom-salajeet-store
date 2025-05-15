@@ -1,0 +1,141 @@
+/* General Body Style */
+body {
+  background-color: #4A7324;
+}
+
+/* Product Section */
+.product-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#detalproductimg {
+ 
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 300px; /* Limit the height to prevent overly tall images */
+  object-fit: contain; /* Ensure the whole image is visible without cropping */
+  display: block; /* Removes extra space below images in some browsers */
+  margin: 0 auto; /* Center the image if needed */
+  border-radius: 8px; /* Optional: Add rounded corners for a modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visual appeal */
+}
+
+
+.product-details {
+  padding: 20px;
+}
+
+/* Admin Actions and Buttons */
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.admin-actions .btn {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 8px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  
+}
+
+/* Add to Cart Button Styling */
+.admin-actions .btn-add-to-cart {
+  background-color: #f39c12; 
+  color: white;
+  font-size: 16px;
+  width: auto; 
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; 
+  padding: 8px 20px;
+}
+
+.admin-actions .btn-add-to-cart:hover {
+  background-color: #d87c06; 
+}
+
+.admin-actions .btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.admin-actions .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.admin-actions .btn-success:hover,
+.admin-actions .btn-danger:hover {
+  opacity: 0.9;
+}
+
+/* Review Section */
+.review-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.star-rating {
+  color: #ffc107;
+}
+
+.review-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+/* Scrollable Review Container */
+#review-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#review-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+#review-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+#review-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+#review-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Form Styling */
+.form-floating {
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-actions {
+      justify-content: flex-start;
+      gap: 5px;
+  }
+
+  .admin-actions .btn {
+      flex: none;
+  }
+}
