@@ -1,26 +1,37 @@
-# Salajeet & Dry Fruits Website
+# Blaghari Himalayan Salajeet & Dry Fruits Store
 
-This is a complete and responsive website for a natural Salajeet and Dry Fruits online store. It is designed using HTML5, CSS3, JavaScript, and Bootstrap 5. The purpose of this project is to showcase premium quality organic products like Salajeet and various dry fruits sourced directly from the Gilgit-Baltistan region of Pakistan. The website is ideal for local sellers who want to promote their products online with a modern and clean interface.
+This is a complete, responsive, and dynamic e-commerce website for the **Blaghari Himalayan Salajeet & Dry Fruits Store**, developed using **HTML5, CSS3, JavaScript, Bootstrap 5**, and **Django (Python)** for the backend.
 
-The homepage includes a beautiful banner, featured products, and highlights of the benefits of using natural Salajeet and dry fruits. Dedicated sections such as "About Us", "Our Products", and "Testimonials" help build trust and present information in a clear way.
+The website promotes premium organic products like Himalayan Salajeet and various dry fruits, directly sourced from the Gilgit-Baltistan region. It is designed for small businesses and local sellers looking to build an online presence with a modern and clean interface.
 
-One of the key features of this website is its **fully functional contact form**. The form allows users to send inquiries or orders directly to the store owner's email using a third-party service like Formspree or EmailJS. No backend server is needed, yet users can easily connect and send messages through the site.
+The homepage features a dynamic product showcase, banners, and highlights of the health benefits of natural products. Sections like **About Us**, **Our Products**, and **Testimonials** help build credibility and tell the brand story.
 
-The website also includes:
+### 🔧 Backend Functionality (Django):
+- Dynamic product management via Django admin
+- Email sending through functional **contact form**
+- URL routing and templating with Django
+- Secure form handling and data validation
+- Easy to scale and connect with databases like PostgreSQL or SQLite
 
-- Responsive layout for all screen sizes
-- Interactive product cards with hover effects
-- Smooth scroll and animation effects
-- Organized folder structure for easy development
+### ✉️ Contact Form:
+Unlike basic static websites, this project includes a **fully functional contact form** that uses Django's email framework to send customer inquiries directly to the admin/store owner’s inbox. No external service like Formspree is required.
+
+###  Key Features:
+- Responsive design (Bootstrap 5)
+- Product listing and category structure
+- Interactive UI with JavaScript animations
+- Smooth scrolling and hover effects
+- Django backend with clean codebase
+- Secure and ready for deployment
 
 ### Technologies Used:
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla)  
+- HTML5 & CSS3  
 - Bootstrap 5  
-- Formspree (for email functionality)
+- JavaScript (Vanilla)  
+- Python 3  
+- Django Web Framework  
 
-This website is designed for frontend showcase purposes but can be extended to a full-stack e-commerce site. The code is clean, well-commented, and easy to modify for personal or commercial use.
+This project can be extended into a full-featured e-commerce platform with cart, login, payment gateway, etc. It is ideal for learning or for local businesses going digital.
 
 Feel free to fork, clone, or contribute to the project.
 
